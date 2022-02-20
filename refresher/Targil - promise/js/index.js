@@ -14,6 +14,11 @@ const handleBtnClick = async () => {
     let valStrInput = document.getElementById("strInput").value;
     let arrFromStr = await strToArr(valStrInput);
     console.log(arrFromStr);
+    let newElements = "";
+    for (let item of arrFromStr) {
+      newElements += item + "<br>";
+    }
+    document.getElementById("strOutput").innerHTML = newElements;
   } catch (err) {
     console.error("error from promise", err);
   }
