@@ -16,7 +16,9 @@ const handleBtnClick = async () => {
     console.log(arrFromStr);
     let newElements = "";
     for (let item of arrFromStr) {
-      newElements += item + "<br>";
+      //   newElements += item + "<br>";
+      //   newElements += "<li>" + item + "</li>";
+      newElements += `<li>${item}</li>`;
     }
     document.getElementById("strOutput").innerHTML = newElements;
   } catch (err) {
